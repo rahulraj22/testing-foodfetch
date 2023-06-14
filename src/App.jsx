@@ -3,7 +3,6 @@ import './App.css'
 import TypeWriter from './TypeWriter';
 
 function App() {
-    var mykey = config.MY_KEY;
     const [query, setQuery] = useState('');
     const [container, setContainer] = useState([]);
     const [endPoint, setEndpoint] = useState('');
@@ -12,7 +11,7 @@ function App() {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': mykey,
+            'X-RapidAPI-Key': process.env.KEY,
             'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
         }
     };
